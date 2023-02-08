@@ -1,0 +1,28 @@
+{
+  "name": "music-analyzer",
+  "version": "1.0.0",
+  "description": "Web application that lets you to make a comparison between music artists. <br/> The comparison is made by parameters that characterize the nature of the artist's music. <br/> All stats are displayed on a Bar Chart.  <br/>",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start --prefix server",
+    "client": "npm run start --prefix client",
+    "dev-server": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run dev-server\" \"npm run client\" ",
+    "test:client": "npm run test --prefix client",
+    "setup": "npm install && npm install --prefix client && npm install --prefix server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm install --prefix client && npm install --prefix server && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stavelmashally/music-analyzer.git"
+  },
+  "author": "Stav Elmashally",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stavelmashally/music-analyzer/issues"
+  },
+  "homepage": "https://github.com/stavelmashally/music-analyzer#readme",
+  "dependencies": {
+    "concurrently": "^6.0.1"
+  }
+}
